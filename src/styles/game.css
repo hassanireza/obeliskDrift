@@ -1,0 +1,349 @@
+.obelisk-app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  background: radial-gradient(ellipse at 35% 10%, #17191d 0%, var(--color-bg) 55%, var(--color-void) 100%);
+}
+
+.obelisk-eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-silver);
+}
+
+.obelisk-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: var(--max-content);
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--edge);
+  gap: 18px;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.obelisk-start-mark {
+  opacity: 0.9;
+  margin-bottom: 4px;
+}
+
+.obelisk-title {
+  font-size: clamp(2.4rem, 8vw, 3.6rem);
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+
+.obelisk-title-small {
+  font-size: clamp(1.8rem, 6vw, 2.4rem);
+  margin-bottom: 8px;
+}
+
+.obelisk-subtitle {
+  color: var(--color-bone-dim);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+.obelisk-lede {
+  max-width: 46ch;
+  color: var(--color-silver);
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+.obelisk-hint {
+  color: var(--color-bone-dim);
+  font-size: 0.8rem;
+  letter-spacing: var(--tracking-wide);
+  margin-top: 4px;
+}
+
+.obelisk-primary-button,
+.obelisk-secondary-button,
+.obelisk-text-button {
+  font-size: 0.85rem;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  border-radius: 2px;
+  min-height: 48px;
+  padding: 0 28px;
+  transition: background var(--duration-fast) var(--ease-critical), color var(--duration-fast) var(--ease-critical),
+    border-color var(--duration-fast) var(--ease-critical);
+}
+
+.obelisk-primary-button {
+  margin-top: 14px;
+  background: var(--color-bone);
+  color: var(--color-bg);
+  border: 1px solid var(--color-bone);
+}
+
+.obelisk-primary-button:hover {
+  background: transparent;
+  color: var(--color-bone);
+}
+
+.obelisk-secondary-button {
+  background: transparent;
+  color: var(--color-bone);
+  border: 1px solid var(--color-hairline-strong);
+}
+
+.obelisk-secondary-button:hover {
+  border-color: var(--color-bone);
+}
+
+.obelisk-text-button {
+  background: transparent;
+  color: var(--color-silver);
+  border: none;
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.obelisk-chamber-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 560px;
+  border-top: 1px solid var(--color-hairline);
+}
+
+.obelisk-chamber-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-hairline);
+  color: var(--color-bone);
+  padding: 16px 8px;
+  text-align: left;
+  min-height: 64px;
+}
+
+.obelisk-chamber-item:disabled {
+  color: var(--color-silver);
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.obelisk-chamber-item:not(:disabled):hover {
+  background: rgba(233, 230, 223, 0.04);
+}
+
+.obelisk-chamber-number {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--color-silver);
+  width: 2.2ch;
+  flex-shrink: 0;
+}
+
+.obelisk-chamber-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.obelisk-chamber-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+}
+
+.obelisk-chamber-epigraph {
+  font-size: 0.78rem;
+  color: var(--color-silver);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.obelisk-chamber-status {
+  font-size: 0.72rem;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-bone-dim);
+  flex-shrink: 0;
+}
+
+.obelisk-play-view {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.obelisk-hud {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: max(12px, env(safe-area-inset-top)) var(--edge) 12px;
+}
+
+.obelisk-hud-left,
+.obelisk-hud-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.obelisk-hud-title h2 {
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.obelisk-icon-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-hairline-strong);
+  background: transparent;
+  color: var(--color-bone);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.obelisk-icon-button:hover {
+  border-color: var(--color-bone);
+}
+
+.obelisk-launch-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.obelisk-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--color-bone-dim);
+  background: transparent;
+}
+
+.obelisk-dot-spent {
+  background: var(--color-bone-dim);
+}
+
+.obelisk-canvas-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px var(--edge) 4px;
+  min-height: 0;
+}
+
+.obelisk-canvas {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  touch-action: none;
+  border: 1px solid var(--color-hairline);
+  background: var(--color-void);
+}
+
+.obelisk-epigraph {
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-silver);
+  font-size: 0.85rem;
+  padding: 0 var(--edge) max(16px, env(safe-area-inset-bottom));
+}
+
+.obelisk-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--edge);
+  background: rgba(3, 3, 4, 0.72);
+  backdrop-filter: blur(6px);
+}
+
+.obelisk-overlay-panel {
+  max-width: 440px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 40px 28px;
+  border: 1px solid var(--color-hairline-strong);
+  background: rgba(12, 14, 18, 0.9);
+}
+
+.obelisk-overlay-panel h2 {
+  font-size: 1.8rem;
+  font-style: italic;
+}
+
+.obelisk-overlay-panel p {
+  color: var(--color-silver);
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.obelisk-overlay-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .obelisk-hud {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .obelisk-canvas-wrapper {
+    padding: 6px 10px 4px;
+  }
+
+  .obelisk-hud-title h2 {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-height: 640px) and (orientation: landscape) {
+  .obelisk-hud {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .obelisk-epigraph {
+    display: none;
+  }
+}

@@ -1,0 +1,27 @@
+:root {
+  /* Palette: near monochrome, cold, oceanic. */
+  --color-bg: #07080a;
+  --color-charcoal: #16181c;
+  --color-shadow: #0c0e12;
+  --color-bone: #e9e6df;
+  --color-bone-dim: #a8a49a;
+  --color-silver: #8b8f94;
+  --color-void: #030304;
+  --color-hairline: rgba(233, 230, 223, 0.12);
+  --color-hairline-strong: rgba(233, 230, 223, 0.24);
+  --color-danger: #7c7670;
+
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  --tracking-label: 0.24em;
+  --tracking-wide: 0.08em;
+
+  --ease-critical: cubic-bezier(0.16, 0.5, 0.1, 1);
+  --duration-slow: 1200ms;
+  --duration-med: 900ms;
+  --duration-fast: 420ms;
+
+  --edge: clamp(16px, 5vw, 56px);
+  --max-content: 720px;
+}
