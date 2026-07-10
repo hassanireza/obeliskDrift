@@ -62,7 +62,7 @@ export function GameCanvas({ chamber, onSeated, onSpentOut, launchesUsed, onLaun
       const state = stateRef.current;
       if (!state.atRest || launchesUsed >= chamber.maxLaunches) return;
       const world = toWorld(event.clientX, event.clientY);
-      if (distance(world, state.position) > 70) return;
+      if (distance(world, state.position) > 84) return;
       event.currentTarget.setPointerCapture(event.pointerId);
       dragRef.current = { pointerId: event.pointerId, origin: world, current: world };
       forceRender((n) => n + 1);
